@@ -4,16 +4,16 @@ import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
 import styles from './Blog.module.css';
 
 import Posts from './Posts/Posts';
-import asyncComponent from '../../hoc/asyncComponent';
+import AsyncComponent from '../../hoc/AsyncComponent';
 // import NewPost from './NewPost/NewPost';
 
-const AsyncNewPost = asyncComponent(() => {
+const AsyncNewPost = AsyncComponent(() => {
 	return import('./NewPost/NewPost');
 });
 
 class Blog extends Component {
 	state = {
-		isAuth: false
+		isAuth: true
 	};
 
 	render() {
